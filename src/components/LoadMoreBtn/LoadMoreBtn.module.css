@@ -1,0 +1,17 @@
+.wrap {
+  display: flex;
+  justify-content: center;
+  border-color: #4169e1;
+}
+
+.btn {
+  border-color: #4169e1;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.btn:hover,
+.btn:focus {
+  border-color: rgb(82, 82, 148);
+}

@@ -1,0 +1,16 @@
+.form {
+  width: 100%;
+  background-color: #4169e1;
+  padding: 8px 0;
+  /* margin-left: 0px;
+  margin-right: -20px; */
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input{
+  padding: 10px;
+  margin-left: 5px;
+}

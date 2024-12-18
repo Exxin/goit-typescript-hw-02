@@ -1,0 +1,14 @@
+.btn {
+  padding: 0.52em 1.2em;
+  border: 1px solid #fff;
+  transition: all 0.25s;
+  margin-left: 5px;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+  border: 1px solid #30c535;
+  border-radius: 0px;
+  color: #30c535;
+}
