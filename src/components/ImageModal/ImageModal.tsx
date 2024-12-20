@@ -1,6 +1,12 @@
 import Modal from "react-modal";
 import styles from "./ImageModal.module.css";
 
+interface ImageModalProps {
+  imageUrl: string | null;
+  isOpen: boolean;
+  onClose: () => void;
+}
+
 const customStyles = {
   overlay: {
     backgroundColor: "rgba(0, 0, 0, 0.5)",
@@ -15,18 +21,7 @@ const customStyles = {
   },
 };
 
-// Типи для пропсів компонента
-interface ImageModalProps {
-  imageUrl: string;
-  isOpen: boolean;
-  onClose: () => void;
-}
-
-export default function ImageModal({
-  imageUrl,
-  isOpen,
-  onClose,
-}: ImageModalProps) {
+export default function ImageModal({ imageUrl, isOpen, onClose }: ImageModalProps) {
   return (
     <Modal
       isOpen={isOpen}
@@ -36,7 +31,11 @@ export default function ImageModal({
       appElement={document.getElementById("root") || undefined}
     >
       <div>
-        <img className={styles.img} src={imageUrl} alt="Image" />
+        {imageUrl ? (
+          <img className={styles.img} src={imageUrl} alt="Selected image" />
+        ) : (
+          <p>No image selected</p>
+        )}
       </div>
     </Modal>
   );
